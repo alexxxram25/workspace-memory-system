@@ -2,6 +2,8 @@
 
 A Claude Code setup skill that stands up a two-layer personal workspace memory system, so any LLM that opens your workspace is instantly briefed and your knowledge compounds over time instead of vanishing into chat history.
 
+> **Local-first.** Everything is plain markdown on your own machine. No cloud account, no vendor lock-in, and your financial data never leaves your laptop.
+
 ## Who this is for
 
 This is for finance and operations professionals who are buried in context (vendor agreements, close checklists, policy decisions, scattered Slack threads) but don't have an engineering team to stand up retrieval infrastructure. It runs entirely on your own machine: everything is plain markdown in folders you control, with no SaaS vector database ingesting your financials and no cloud account to manage. Sensitive data (customer, vendor, comp, financial) never leaves your laptop. Think of it as a zero-infrastructure starting point that stays valuable even after you add vector search, and that can later feed it.
