@@ -2,6 +2,10 @@
 
 A Claude Code setup skill that stands up a two-layer personal workspace memory system, so any LLM that opens your workspace is instantly briefed and your knowledge compounds over time instead of vanishing into chat history.
 
+## Who this is for
+
+This is for finance and operations professionals who are buried in context (vendor agreements, close checklists, policy decisions, scattered Slack threads) but don't have an engineering team to stand up retrieval infrastructure. It runs entirely on your own machine: everything is plain markdown in folders you control, with no SaaS vector database ingesting your financials and no cloud account to manage. Sensitive data (customer, vendor, comp, financial) never leaves your laptop. Think of it as a zero-infrastructure starting point that stays valuable even after you add vector search, and that can later feed it.
+
 ## The two layers
 
 **1. Operating-manual "buckets" (the operational layer).** One folder per area of your work. Each bucket holds:
@@ -23,6 +27,10 @@ Traditional RAG re-reads raw sources per query. The LLM Wiki pre-compiles those 
 1. **Layer 1, immutable raw sources** — the bucket files and each wiki domain's `raw/` folder.
 2. **Layer 2, the compiled wiki** — cross-linked domain pages and indexes.
 3. **Layer 3, the schema** — the `CLAUDE.md` files that tell an LLM how to read and extend everything.
+
+## When you might add more
+
+Nothing here locks you in. As your wiki grows, you can point a vector database like Pinecone at the compiled markdown pages to add semantic search across everything, with no re-architecting required. The wiki keeps doing what it does best (auditable, human-readable, compounding knowledge) and the vector layer sits on top of it for retrieval at scale. This is a first step, not a lesser one: the compiled pages become the clean, curated corpus that a retrieval layer wants to index.
 
 ## How the setup runs
 
